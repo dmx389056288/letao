@@ -1,0 +1,15 @@
+.bg-login{
+	background-color: #222D32;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+}
+.mt_150{
+	margin-top: 150px;
+}
+.panel .panel-title{
+	height: 40px;
+	line-height: 50px;
+	font-size: 18px;
+}

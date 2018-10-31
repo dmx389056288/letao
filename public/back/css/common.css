@@ -14,9 +14,10 @@ ul{
 	padding: 0;
 	list-style: none;
 }
-a{
+a,a:hover{
 	text-decoration: none;
 }
+
 .mt_150{
 	margin-top: 150px;
 }
@@ -126,4 +127,19 @@ a{
 .main-header.hidemenu,
 .lt-main.hidemenu{
 	padding-left: 0px;
+}
+.main-content{
+	padding: 15px;
+}
+/* 需要准备两个具备宽高的容器 */
+.main-content .echarts_left,
+.main-content .echarts_right {
+  width: 48%;
+  height: 400px;
+  background-color: skyblue;
+}
+/* 用户界面表单 */
+.table.table-bordered th{
+	text-align: center;
+	vertical-align: middle;
 }

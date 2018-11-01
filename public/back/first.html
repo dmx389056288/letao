@@ -66,11 +66,24 @@
 					<li><a href="index.html">分类管理</a></li>
 					<li class="active">一级分类</li>
 				</ol>
-				
+				<!-- 表格内容区域 -->
+				<button class="btn btn-default mb-20" id="addBtn">添加分类</button>
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th width="20%">序号</th>
+							<th width="80%">一级分类</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+					</tbody>
+				</table>
+				<ul id="pagintor"></ul>
 			</div>
 		</div>
 		
-		<!-- 模态框 -->
+		<!-- 退出登录模态框 -->
 		
 			<div class="modal fade" tabindex="-1" id="logoutModal">
 			  <div class="modal-dialog modal-sm" >
@@ -90,12 +103,45 @@
 			  </div><!-- /.modal-dialog -->
 			</div><!-- /.modal -->
 		
+		<!-- 添加分类模态框 -->
+		<!-- 退出登录模态框 -->
+		
+			<div class="modal fade" tabindex="-1" id="addModal">
+				<div class="modal-dialog modal-sm" >
+				<div class="modal-content" >
+					<form id="form">	
+					<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" ><span>&times;</span></button>
+					<h4 class="modal-title">添加分类</h4>
+					</div>
+					<div class="form-group">
+					<input type="text" name="categoryName" placeholder="请输入一级分类"  class="form-control"/>
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">确定</button>
+					</div>
+					</form>
+				</div><!-- /.modal-content -->
+				
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
 	</body>
-	
+	<script type="text/template" id = 'firstTmp'>
+		{{each rows v i}}
+		<tr>
+			<td>{{v.id}}</td>
+			<td>{{v.categoryName}}</td>
+		</tr>
+		{{/each}}
+	</script>
 	<script src="lib/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="lib/nprogress/nprogress.js" type="text/javascript" charset="utf-8"></script>
 	<script src="lib/bootstrap-validator/js/bootstrapValidator.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="lib/artTemplate/template-web.js" type="text/javascript" charset="utf-8"></script>
+	<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/first.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/checkLogin.js" type="text/javascript" charset="utf-8"></script>
 </html>

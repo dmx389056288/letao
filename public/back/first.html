@@ -79,7 +79,10 @@
 						
 					</tbody>
 				</table>
-				<ul id="pagintor"></ul>
+				<div class="text-right">
+					<ul id="pagintor"></ul>
+				</div>
+				
 			</div>
 		</div>
 		
@@ -130,7 +133,7 @@
 	<script type="text/template" id = 'firstTmp'>
 		{{each rows v i}}
 		<tr>
-			<td>{{v.id}}</td>
+			<td>{{i+1+(page-1)*size}}</td>
 			<td>{{v.categoryName}}</td>
 		</tr>
 		{{/each}}

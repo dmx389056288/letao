@@ -146,3 +146,12 @@ a,a:hover{
 .mb-20{
 	margin-bottom: 20px;
 }
+table img{
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+}
+#addModal img{
+	height: 100px;
+	width: auto;
+}

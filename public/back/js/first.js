@@ -26,6 +26,8 @@ $(function(){
 			  size:"small",//设置控件的大小，mini, small, normal,large
 			  onPageClicked:function(event, originalEvent, type,page){
 				//为按钮绑定点击事件 page:当前点击的按钮值
+				currentPage = page;
+				render()
 			  }
 			});
 			

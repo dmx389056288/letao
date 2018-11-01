@@ -6,7 +6,7 @@
 		<title>后台管理界面</title>
 		<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="lib/bootstrap-validator/css/bootstrapValidator.min.css" />
-		<link rel="stylesheet" type="text/css" href="lib/nprogress/nprogress.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/nprogress/nprogress.css" />
 		<link rel="stylesheet" type="text/css" href="css/common.css" />
 	</head>
 	<body>
@@ -28,7 +28,7 @@
 						</a>
 					</li>
 					<li>
-						
+
 						<a href="javascript:;" class="category">
 							<i class="glyphicon glyphicon-list"></i>
 							<span>分类管理</span>
@@ -39,7 +39,7 @@
 						</div>
 					</li>
 					<li>
-						
+
 						<a href="product.html">
 							<i class="glyphicon glyphicon-tags"></i>
 							<span>商品管理</span>
@@ -77,42 +77,64 @@
 							</tr>
 						</thead>
 						<tbody>
-					
+
 						</tbody>
 					</table>
+					<!-- 为分页准备一个容器 -->
+					<div class="text-right">
+						<ul id="paginator"></ul>
+					</div>
 				</div>
 			</div>
 		</div>
-		
-		<!-- 模态框 -->
-		
-			<div class="modal fade" tabindex="-1" id="logoutModal">
-			  <div class="modal-dialog modal-sm" >
-				<div class="modal-content" >
-				  <div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" ><span>&times;</span></button>
-					<h4 class="modal-title">温馨提示</h4>
-				  </div>
-				  <div class="modal-body">
-					<p>你确定要退出后台管理系统吗</p>
-				  </div>
-				  <div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-					<button type="button" class="btn btn-primary" id="logouBtn">确定</button>
-				  </div>
+
+		<!-- 退出登录模态框 -->
+
+		<div class="modal fade" tabindex="-1" id="logoutModal">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+						<h4 class="modal-title">温馨提示</h4>
+					</div>
+					<div class="modal-body">
+						<p>你确定要退出后台管理系统吗</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary" id="logouBtn">确定</button>
+					</div>
 				</div><!-- /.modal-content -->
-			  </div><!-- /.modal-dialog -->
-			</div><!-- /.modal -->
-		
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+		<!-- 启用禁用模态框 -->
+		<div class="modal fade" tabindex="-1" id="userModal">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+						<h4 class="modal-title">温馨提示</h4>
+					</div>
+					<div class="modal-body">
+						<p>你确定要执行此操作吗？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary" id="submitBtn">确定</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 	</body>
 	<script type="text/html" id="tmp">
 		{{each rows v i }}
 		<tr>
-		<td>{{i+1}}</td>
+		<td>{{i +1 + (page -1)*size}}</td>
 		<td>{{v.username}}</td>
 		<td>{{v.mobile}}</td>
 		<td>{{v.isDelete === 1 ? "正常" : "已禁用" }}</td>
-		<td>
+		<td data-id="{{v.id}}">
 			{{if v.isDelete === 1}}
 				<button class="btn btn-danger">禁用</button>
 			{{else}}
@@ -128,7 +150,9 @@
 	<script src="lib/nprogress/nprogress.js" type="text/javascript" charset="utf-8"></script>
 	<script src="lib/bootstrap-validator/js/bootstrapValidator.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="lib/artTemplate/template-web.js" type="text/javascript" charset="utf-8"></script>
+	<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/checkLogin.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/user.js" type="text/javascript" charset="utf-8"></script>
+	
 </html>

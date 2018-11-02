@@ -155,3 +155,6 @@ table img{
 	height: 100px;
 	width: auto;
 }
+#imgBox img{
+	display: inline-block;
+}

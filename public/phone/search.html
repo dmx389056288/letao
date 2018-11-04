@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="lib/mui/css/mui.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/fa/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/search.css"/>
+	</head>
+
+	<body>
+		<div class="lt-container">
+			<!-- 头部 -->
+			<div class="lt-header">
+				<a href="javascript:history.go(-1)"; class="header-l pull-left">
+					<i class="mui-icon mui-icon-back"></i>
+				</a>
+				<a href="#" class="header-r pull-right">
+					
+				</a>
+				<h3>搜索中心</h3>
+				
+			</div>
+		
+			<!-- 主体 -->
+			<div class="lt-main">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<!-- 搜索框 -->
+					<div class="lt-search">
+						<input type="text" placeholder="请输入关键字"/>
+						<button type="button" class="mui-btn mui-btn-primary btn-search">搜索</button>
+					</div>
+					<!-- 历史记录 -->
+					<div class="lt-history">
+						
+						
+					</div>
+				</div>
+			</div>
+			</div>
+			<!-- 底部 -->
+			<div class="lt-footer">
+				<ul>
+					<li>
+						<a href="index.html" >
+							<i class="fa fa-home"></i>
+							<p>首页</p>
+						</a>
+					</li>
+					<li>
+						<a href="category.html">
+							<i class="fa fa-bars"></i>
+							<p>分类页</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-shopping-cart"></i>
+							<p>购物车</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-user"></i>
+							<p>用户中心</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<script type="text/tempalte" id="search-tpl">
+			
+			{{if list.length===0}}
+			<p>没有历史访问数据</p>
+			{{else}}
+			
+			<div class="title mui-clearfix">
+				<span class="pull-left">搜索历史</span>
+				<span class="pull-right lt-clear">
+					<i class="fa fa-trash"></i>
+					清空记录
+				</span>
+			</div>
+			<div class="content">
+				<ul>
+					{{each list v i}}
+					<li>
+						<a href="#" class="mui-pull-left">{{v}}</a>
+						<i class="btn-delete mui-pull-right mui-icon mui-icon-closeempty" data-index='{{i}}'></i>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+			
+			{{/if}}
+		</script>
+		<script src="lib/mui/js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/zepto/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/artTemplate/template-web.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

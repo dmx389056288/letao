@@ -1,0 +1,158 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+
+.lt_container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  padding-top: 45px;
+  padding-bottom: 55px;
+  position: relative;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.lt_header {
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #006699;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+.lt_header .icon_left,
+.lt_header .icon_right {
+  position: absolute;
+  top: 0;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  color: #fff;
+}
+.lt_header .icon_left {
+  left: 0;
+}
+.lt_header .icon_right {
+  right: 0;
+}
+.lt_header h3 {
+  font-size: 20px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  margin: 0;
+  font-weight: normal;
+}
+
+
+
+
+.lt_footer {
+  width: 100%;
+  height: 55px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #006699;
+}
+.lt_footer li {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.lt_footer li a {
+  display: block;
+  color: #fff;
+  padding-top: 8px;
+}
+.lt_footer li a p {
+  margin: 0;
+  color: #fff;
+}
+.lt_footer li a.current {
+  color: orange;
+}
+.lt_footer li a.current p {
+  color: orange;
+}
+
+
+
+.lt_main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+
+/* 公共的搜索框样式 */
+.lt_search {
+  padding: 10px;
+  position: relative;
+}
+.lt_search input {
+  margin: 0;
+  height: 34px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #007AFF;
+}
+.lt_search button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 0 5px 5px 0;
+}
+
+
+/* 公共的商品样式 */
+
+/* 商品样式 */
+.lt_product {
+  padding: 10px;
+}
+.lt_product li {
+  float: left;
+  width: 48%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.lt_product li:nth-child(2n-1) {
+  margin-right: 4%;
+}
+.lt_product li a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
+.lt_product li img {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+}
+.lt_product li .price {
+  color: red;
+}
+.lt_product li .oldPrice {
+  text-decoration: line-through;
+}

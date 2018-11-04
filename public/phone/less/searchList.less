@@ -1,0 +1,73 @@
+@import "common";
+.lt-main{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	.lt-search{
+		padding: 10px;
+		posistion:relative;
+			input{
+				border:1px solid #007AFF;
+				border-radius: 5px;
+				height: 34px;
+				margin: 0;
+				font-size: 12px;
+			}
+			button{
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				border-radius: 0 5px 5px 0;
+			}
+	}
+	.lt-sort{
+		background-color: #EEEEEE;
+		width: 100%;
+		a{
+			height: 30px;
+			display: block;
+			float: left;
+			width: 25%;
+			color: #666;
+			text-align: center;
+			font-size: 12px;
+			line-height: 30px;
+		}
+	}
+	.lt-product{
+		padding: 10px;
+		li{
+			float: left;
+			width: 48%;
+			border: 1px solid #ccc;
+			padding: 10px;
+			margin-bottom: 10px;
+			&:nth-child(2n+1){
+				margin-right: 4%;
+			}
+			a{
+				width: 100%;
+				height: 100%;
+				img{
+					width: 130px;
+					height: 130px;
+					margin: 0 auto;
+					display: block;
+				}
+				P{
+					text-align: center;
+					.price{
+						color: red;
+					}
+					.oldPrice{
+						text-decoration: line-through;
+					}
+				}
+				button{
+					display: block;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}

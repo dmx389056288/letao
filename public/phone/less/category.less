@@ -1,0 +1,49 @@
+@import "common";
+
+
+.lt-category-left{
+	position: relative;
+	height: 100%;
+	width: 90px;
+	float: left;
+	ul{
+		
+		a{
+			display: block;
+			width: 90px;
+			height: 50px;
+			line-height: 50px;
+			color: #666;
+			background-color: #E3E4E5;
+			text-align: center;
+			border-bottom: 1px solid #ccc;
+			border-right:1px solid #ccc;
+			&.current{
+				background-color: #fff;
+				border-right: transparent;
+			}
+		}
+	}
+}
+.lt-category-right{
+	position: relative;
+	height: 100%;
+	margin-left: 90px;
+	overflow: hidden;
+	li{
+		width: 33.33%;
+		float: left;
+		a{
+			display: block;
+			text-align: center;
+			width: 100%;
+			height: 100%;
+			img{
+				width: 70px;
+				height: 50px;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+}
